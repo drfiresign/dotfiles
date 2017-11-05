@@ -17,19 +17,33 @@ create_symlink () {
 for file in $FILES
 do
   if [ -e "$HOME/$file" ] && ! [ -L "$HOME/$file" ] ; then
-    echo \tmoving old ${file}...
+    echo Moving old ${file}...
     # move old files into d/o/
     mv $HOME/$file $HOME/dotfiles/old/
     # symlink into $HOME
-		create_symlink
-	elif ! [ -e "$HOME/$file" ] ; then
-    echo \t~/${file} has not been created,\n\tcreating symlink.
-		create_symlink
-  fi	
+    create_symlink
+  elif ! [ -e "$HOME/$file" ] ; then
+    echo ~/${file} has not been created,\nCreating symlink.
+    create_symlink
+  else
+    echo You\'ve already run this script.
+  fi
 done
 
 # check for nvim
 if ! type 'nvim' > /dev/null; then
-  echo You do not have NeoVim installed.
-  echo Check for installation details for your system.
+  echo NeoVim not installed.
+  echo Check your system\'s installation details.
+else
+  echo NeoVim installed.
+fi
+
+# check of oh-my-zsh/
+if ! [ -e "oh-my-zsh/" ]; then
+  echo Installing Oh My Zsh...
+  sh -c "$(curl -ffSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  continue
+  echo Oh My Zsh installed.
+else
+  echo You already have Oh My Zsh installed.
 fi
