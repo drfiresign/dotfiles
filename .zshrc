@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Drfiresign/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -34,7 +34,7 @@ HYPHEN_INSENSITIVE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -65,11 +65,15 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vi'
-# else
-#   export EDITOR='nvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vi'
+ else
+   if type nvim > /dev/null; then
+      export EDITOR='nvim'
+   else
+      export EDITOR='vi'
+   fi
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
