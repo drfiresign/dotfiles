@@ -1,8 +1,3 @@
-set number
-
-" places temp files in a special directory! Don't forget to clean this out.
-set backupdir=~/vimtemp//
-set directory=~/vimtemp//
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -99,3 +94,9 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" My commands
+set number
+" places temp files in a special directory! Don't forget to clean this out.
+set backupdir=~/vimtemp//
+set directory=~/vimtemp//

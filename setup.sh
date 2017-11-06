@@ -2,22 +2,18 @@
 
 # create list of files to move
 
-FILES=('.zshrc' '.tmux.conf' '.vimrc')
+FILES=".zshrc .tmux.conf .vimrc"
 dots=$HOME/dotfiles
 olddots=$HOME/dotfiles/old
 
 # make sure we're in right area and create dotfiles/old/
-cd dots
+cd $dots
 if ! [ -e $olddots/ ]; then
   echo Making old file directory
   mkdir $olddots/
   echo ...done
 fi
 
-# functions
-create_symlink () {
-  ln -s $dots/$file $HOME/$file
-}
 for file in $FILES; do
   if [ -e "$HOME/$file" ] && ! [ -L "$HOME/$file" ] ; then
     echo Moving old ${file}...
@@ -25,11 +21,11 @@ for file in $FILES; do
     mv $HOME/$file $olddots/
     # symlink into $HOME
     echo ...done\nCreating symlink
-    create_symlink
+    ln -s $dots/$file $HOME/$file
     echo ...done
   elif ! [ -e "$HOME/$file" ] ; then
     echo ~/${file} has not been created,\nCreating symlink.
-    create_symlink
+    ln -s $dots/$file $HOME/$file
     echo ...done
   else
     echo You\'ve already run this script.
@@ -37,7 +33,7 @@ for file in $FILES; do
 done
 
 # check for nvim
-if ! type 'nvim' > /dev/null; then
+if ! type 'nvim' >> /dev/null; then
   echo NeoVim not installed.
   echo Check your system\'s installation details.
 else
@@ -52,3 +48,13 @@ else
   sh -c "$(curl -ffSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   echo ...done
 fi
+
+# check for pyenv (this manages python installations)
+# check https://github.com/pyenv/pyenv for more information
+# if ! type 'pyenv' >> /dev/null; then
+#   echo pyenv not installed.
+#   curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv/installer | bash
+#   echo ...done
+# else
+#   echo You already have pyenv installed.
+# fi
