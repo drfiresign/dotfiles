@@ -20,7 +20,7 @@ None, because I just solved the problem with neovim not reading my vimrc file!
 You need to create ~/.config/nvim/init.vim with these contents:
 
 ```
-set runtimepath^=\~/.vim runtimepath+=\~/.vim/after
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 ```
