@@ -97,6 +97,7 @@ endif
 
 set number
 set cursorline
+set bg=dark
 " places temp files in a special directory! Don't forget to clean this out.
 set backupdir=~/vimtemp//
 set directory=~/vimtemp//
