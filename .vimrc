@@ -95,7 +95,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-" My commands
 set number
 set cursorline
 " places temp files in a special directory! Don't forget to clean this out.
