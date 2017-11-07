@@ -1,3 +1,4 @@
+set cursorline
 set number
 
 " places temp files in a special directory! Don't forget to clean this out.
