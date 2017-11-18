@@ -101,3 +101,6 @@ set bg=dark
 " places temp files in a special directory! Don't forget to clean this out.
 set backupdir=~/vimtemp//
 set directory=~/vimtemp//
+
+" Ansible indentation correction
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
