@@ -92,5 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/sbin:$PATH"
 
-# XRAY.fm alias
+# radio aliases
 alias xrayfm="mpv 'http://listen.xray.fm:8000/stream'"
+alias nprfm="mpv 'https://www.npr.org/streams/mp3/nprlive24.m3u'"
+alias opbfm="mpv 'https://stream5.opb.org/radio_player.mp3'"
