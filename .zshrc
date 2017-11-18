@@ -91,3 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/sbin:$PATH"
+
+# XRAY.fm alias
+alias xrayfm="mpv 'http://listen.xray.fm:8000/stream'"
