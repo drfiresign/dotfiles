@@ -8,9 +8,10 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="blinks"
-# ZSH_THEME="geometry/geometry"
 # ZSH_THEME="sorin"
-ZSH_THEME="avit"
+ ZSH_THEME="avit"
+# ZSH_THEME="smt"
+# ZSH_THEME="philips"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -96,3 +97,4 @@ export PATH="/usr/local/sbin:$PATH"
 alias xrayfm="mpv 'http://listen.xray.fm:8000/stream'"
 alias nprfm="mpv 'https://www.npr.org/streams/mp3/nprlive24.m3u'"
 alias opbfm="mpv 'https://stream5.opb.org/radio_player.mp3'"
+alias dr='dmenu_run -f -i -l 10 -p "Searching..." -fn "Schumacher Clean" -nb "#181B20" -nf "#9B9081" -sb "#353535" -sf "#5F5F5F"'
