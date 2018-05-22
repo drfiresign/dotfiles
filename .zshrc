@@ -8,8 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="blinks"
-# ZSH_THEME="sorin"
- ZSH_THEME="avit"
+ ZSH_THEME="sorin"
+# ZSH_THEME="avit"
 # ZSH_THEME="smt"
 # ZSH_THEME="philips"
 
@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 
 # radio aliases
 alias xrayfm="mpv 'http://listen.xray.fm:8000/stream'"
