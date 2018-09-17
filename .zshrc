@@ -8,8 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="blinks"
-# ZSH_THEME="sorin"
- ZSH_THEME="avit"
+ ZSH_THEME="sorin"
+# ZSH_THEME="avit"
 # ZSH_THEME="smt"
 # ZSH_THEME="philips"
 
@@ -93,8 +93,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/sbin:$PATH"
 
+# virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
 # radio aliases
 alias xrayfm="mpv 'http://listen.xray.fm:8000/stream'"
 alias nprfm="mpv 'https://www.npr.org/streams/mp3/nprlive24.m3u'"
 alias opbfm="mpv 'https://stream5.opb.org/radio_player.mp3'"
 alias dr='dmenu_run -f -i -l 10 -p "Searching..." -fn "Schumacher Clean" -nb "#181B20" -nf "#9B9081" -sb "#353535" -sf "#5F5F5F"'
+
+bg=dark
