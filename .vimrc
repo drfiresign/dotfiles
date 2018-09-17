@@ -98,6 +98,7 @@ endif
 set number
 set cursorline
 set bg=dark
+
 " set cc=79
 " places temp files in a special directory! Don't forget to clean this out.
 set backupdir=~/vimtemp//
@@ -108,3 +109,6 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Python settings
 autocmd FileType py setlocal ts=4 sts=4 sw=4 expandtab colorcolumn=80
+
+" C indentation
+autocmd FileType c setlocal ts=4 sts=4 sw=4 expandtab
