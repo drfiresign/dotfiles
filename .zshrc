@@ -92,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # export PATH="/usr/local/sbin:$PATH"
+export PATH="/home/drfiresign/anaconda3/bin:$PATH"
 
 # radio aliases
 alias xrayfm="mpv 'http://listen.xray.fm:8000/stream'"
