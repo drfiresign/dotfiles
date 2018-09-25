@@ -94,6 +94,12 @@ source $ZSH/oh-my-zsh.sh
 # export PATH="/usr/local/sbin:$PATH"
 export PATH="/home/drfiresign/anaconda3/bin:$PATH"
 
+# virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
 # radio aliases
 alias xrayfm="mpv 'http://listen.xray.fm:8000/stream'"
 alias nprfm="mpv 'https://www.npr.org/streams/mp3/nprlive24.m3u'"
